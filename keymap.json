@@ -1,0 +1,84 @@
+[
+  {
+    "bindings": {
+      "ctrl-l": ["workspace::SendKeystrokes", "ctrl-w l"],
+      "ctrl-k": ["workspace::SendKeystrokes", "ctrl-w k"],
+      "ctrl-j": ["workspace::SendKeystrokes", "ctrl-w j"],
+      "ctrl-h": ["workspace::SendKeystrokes", "ctrl-w h"],
+      "alt-h": ["workspace::SendKeystrokes", "b y e / cmd-v"],
+      "cmd-t": "workspace::ToggleBottomDock"
+    }
+  },
+
+  {
+    "context": "(Editor && vim_mode==normal && vim_mode!=insert) || KeyContextView",
+    "use_key_equivalents": true,
+    "bindings": {
+      "-": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward"
+    }
+  },
+  {
+    "context": "Editor && vim_mode==normal && vim_mode!=insert",
+    "bindings": {
+      "space f s": "project_symbols::Toggle",
+      "space f w": "pane::DeploySearch",
+      "space f b": "tab_switcher::Toggle",
+      "space f o": "outline::Toggle",
+      "space f f": "file_finder::Toggle",
+      "|": "pane::SplitVertical",
+      "\\": "pane::SplitHorizontal",
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      // "": "pane::ActivatePreviousItem",
+      // "shift-h": "pane::ActivatePreviousItem",
+      "alt-h": "editor::Outdent",
+      "alt-l": "editor::Indent",
+      "space g l": "project_panel::NewSearchInDirectory"
+    }
+  },
+  {
+    "context": "vim_mode==insert",
+    "bindings": {
+      "alt-l": ["workspace::SendKeystrokes", "right"],
+      "alt-k": ["workspace::SendKeystrokes", "up"],
+      "alt-j": ["workspace::SendKeystrokes", "down"],
+      "alt-h": ["workspace::SendKeystrokes", "left"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode==insert",
+    "bindings": {
+      "-": null
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "-": "workspace::ToggleLeftDock",
+      "shift-y shift-y": "workspace::CopyPath",
+      "y y": "workspace::CopyRelativePath",
+      "shift-o": "project_panel::NewDirectory",
+      "o": "project_panel::NewFile",
+      "d": null,
+      "d d": "project_panel::Delete",
+      "c e": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "use_key_equivalents": true,
+    "bindings": {
+      "enter": "editor::Newline",
+      "shift-enter": "editor::ConfirmCompletionReplace",
+      "tab": "editor::ComposeCompletion",
+      "ctrl-y": "editor::ComposeCompletion"
+    }
+  }
+]

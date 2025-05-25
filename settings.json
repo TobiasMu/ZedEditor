@@ -1,0 +1,55 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+//
+{
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "edit_predictions": { "mode": "subtle" },
+  "icon_theme": "Catppuccin Latte",
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Duskfox"
+  },
+  "vim": {
+    "use_system_clipboard": "always",
+    "toggle_relative_line_numbers": true,
+    "use_multiline_find": true,
+    "use_smartcase_find": true
+  },
+  "active_pane_modifiers": {
+    // The factor to grow the active pane by. Defaults to 1.0
+    // which gives the same size as all other panes.
+    "magnification": 1.8,
+    // Inset border size of the active pane, in pixels.
+    "border_size": 0.0,
+    // Opacity of the inactive panes. 0 means transparent, 1 means opaque.
+    // Values are clamped to the [0.0, 1.0] range.
+    "inactive_opacity": 1.0
+  },
+  "cursor_blink": false,
+
+  "command_palette": {
+    "vim_mode": true
+  },
+  "project_panel": {
+    "vim_mode": true,
+    "focused_at_startup": true
+  }
+}
